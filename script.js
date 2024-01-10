@@ -1,5 +1,10 @@
-function validEmail(str) {
-  //your JS code here.
+function validEmail(email) {
+	if (!email || typeof email !== 'string') {
+	  return false;
+	}
+	const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+	const isMatch = emailPattern.test(email);
+	return isMatch;
 }
 
 // Do not change the code below.
